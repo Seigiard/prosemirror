@@ -1,5 +1,5 @@
 {
-  "name": "tiptap",
+  "name": "prosemirror",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,9 @@
     "clean:cache": "exec rm -rf ./.parcel-cache/*",
     "dev": "parcel",
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "postinstall": "npm run clean",
+    "postuninstall": "npm run clean"
   },
   "author": "",
   "license": "ISC",
@@ -22,11 +24,9 @@
     "process": "^0.11.10"
   },
   "dependencies": {
-    "prosemirror-history": "^1.4.0",
-    "prosemirror-keymap": "^1.2.2",
-    "prosemirror-schema-basic": "^1.2.2",
-    "prosemirror-state": "^1.4.3",
-    "prosemirror-view": "^1.33.3",
+    "@tiptap/pm": "^2.2.4",
+    "@tiptap/react": "^2.2.4",
+    "@tiptap/starter-kit": "^2.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

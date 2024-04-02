@@ -1,0 +1,18 @@
+.editor {
+  width: 80vw;
+  height: 50vh;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.editor :global(.ProseMirror) {
+  height: 100%;
+}
+.editor :global(.ProseMirror) p {
+  margin: 0;
+  padding: 0;
+}

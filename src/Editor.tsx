@@ -1,23 +1,27 @@
-import { useEffect, useRef } from "react";
-import { schema } from "prosemirror-schema-basic";
-import { EditorState } from "prosemirror-state";
-import { EditorView } from "prosemirror-view";
+// src/Tiptap.jsx
+import { useEditor, EditorContent } from '@tiptap/react';
+import Document from '@tiptap/extension-document';
+import Paragraph from '@tiptap/extension-paragraph';
+import Text from '@tiptap/extension-text';
+import classes from './Editor.module.css';
+import { EditorJSONPreview } from './EditorViewer';
 
-export function Editor() {
-    const ref = useRef<HTMLDivElement>(null);
+// define your extension array
+const extensions = [Document, Paragraph, Text];
 
-    useEffect(() => {
-        let state = EditorState.create({ schema });
-        let view = new EditorView(ref.current, {
-            state,
-            dispatchTransaction(transaction) {
-                console.log("Document size went from", transaction.before.content.size, "to", transaction.doc.content.size);
-                let newState = view.state.apply(transaction);
-                view.updateState(newState);
-            },
-        });
-        return () => view.destroy();
-    });
+const content =
+  '<p>Hello World!</p><p>Editabele</p><node-view contenteditable="false">and not</node-view>';
 
-    return <div ref={ref}></div>;
-}
+export const Editor = () => {
+  const editor = useEditor({
+    extensions,
+    content,
+  });
+
+  return (
+    <div>
+      <EditorContent className={classes.editor} editor={editor} />
+      {editor && <EditorJSONPreview editor={editor} />}
+    </div>
+  );
+};
