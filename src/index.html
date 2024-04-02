@@ -4,42 +4,81 @@
     <meta charset="utf-8" />
     <title>My Parcel App</title>
     <script type="module" src="index.tsx"></script>
+    <link
+      rel="stylesheet"
+      href="./../node_modules/@picocss/pico/scss/pico.scss"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <ul>
-      <li>
-        <a href="https://prosemirror.net/docs/guide/"
-          >https://prosemirror.net/docs/guide/</a
-        >
-      </li>
-      <li>
-        <a href="https://prosemirror.net/examples/dino/"
-          >https://prosemirror.net/examples/dino/</a
-        >
-      </li>
-      <li>
-        <a href="https://github.com/ponymessenger/use-prosemirror">
-          https://github.com/ponymessenger/use-prosemirror
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/prosemirror-basics/"
-          >https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/prosemirror-basics/</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/build-your-own-pm-view/"
-          >https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/build-your-own-pm-view/</a
-        >
-      </li>
-      <li>
-        <a href="https://tiptap.dev/docs/editor/guide/node-views/react"
-          >https://tiptap.dev/docs/editor/guide/node-views/react</a
-        >
-      </li>
-    </ul>
+    <div class="container">
+      <div id="app"></div>
+      <details>
+        <summary role="button" class="outline">Roadmap</summary>
+        <ul>
+          <li>
+            <input type="checkbox" checked /> React Component in the editor
+          </li>
+          <li>
+            <input type="checkbox" /> React Component in the editor with updates
+            via editor attributes
+          </li>
+          <li>
+            <input type="checkbox" /> React Component in the editor with updates
+            outside of editor (not via editor attributes)
+            <ul>
+              <li><input type="checkbox" /> Simple timestamp</li>
+              <li>
+                <input type="checkbox" /> Click on button to update the
+                component state
+              </li>
+            </ul>
+          </li>
+          <li><input type="checkbox" /> Insert button</li>
+          <li><input type="checkbox" /> Combobox-like prototype</li>
+        </ul>
+      </details>
+      <details>
+        <summary role="button" class="outline">Links</summary>
+        <ul>
+          <li>
+            <a href="https://tiptap.dev/docs/editor/api/schema"
+              >https://tiptap.dev/docs/editor/api/schema</a
+            >
+          </li>
+          <li>
+            <a href="https://prosemirror.net/docs/guide/"
+              >https://prosemirror.net/docs/guide/</a
+            >
+          </li>
+          <li>
+            <a href="https://prosemirror.net/examples/dino/"
+              >https://prosemirror.net/examples/dino/</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/ponymessenger/use-prosemirror">
+              https://github.com/ponymessenger/use-prosemirror
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/prosemirror-basics/"
+              >https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/prosemirror-basics/</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/build-your-own-pm-view/"
+              >https://nytimes.github.io/oak-byo-react-prosemirror-redux/post/build-your-own-pm-view/</a
+            >
+          </li>
+          <li>
+            <a href="https://tiptap.dev/docs/editor/guide/node-views/react"
+              >https://tiptap.dev/docs/editor/guide/node-views/react</a
+            >
+          </li>
+        </ul>
+      </details>
+    </div>
   </body>
 </html>
