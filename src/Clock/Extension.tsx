@@ -18,7 +18,7 @@ const Component = (props) => {
   }, []);
 
   return (
-    <NodeViewWrapper as='span' className='react-component'>
+    <NodeViewWrapper as='kbd' className='react-component'>
       {time}
     </NodeViewWrapper>
   );
