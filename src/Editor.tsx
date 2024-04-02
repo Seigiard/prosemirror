@@ -23,7 +23,7 @@ const content = `
   <p>Editable Content</p>
   <p>Hello World! Look at button component: <${buttonExtensionTag} count="0"><${buttonExtensionTag} /></p>
   <p>Wow, Clocks! <${clockExtensionTag} count="0"></${clockExtensionTag}></p>
-  <p>Wow, Dropdown! <${comboboxExtensionTag}></${comboboxExtensionTag}></p>
+  <p>Wow, Dropdown that using global context! <${comboboxExtensionTag}></${comboboxExtensionTag}></p>
 `;
 
 export const Editor = () => {
