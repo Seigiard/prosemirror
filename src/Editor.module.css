@@ -15,4 +15,10 @@
 .editor :global(.ProseMirror) p {
   margin: 0;
   padding: 0;
+  height: calc(
+    (var(--pico-form-element-spacing-vertical) * 2) + var(--pico-line-height) *
+      1em
+  );
+  display: flex;
+  align-items: center;
 }

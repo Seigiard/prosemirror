@@ -8,9 +8,8 @@
     "clean": "npm run clean:dist && npm run clean:cache",
     "clean:dist": "exec rm -rf ./dist/*",
     "clean:cache": "exec rm -rf ./.parcel-cache/*",
-    "dev": "parcel",
-    "start": "parcel",
-    "build": "parcel build",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url ./",
     "postinstall": "npm run clean",
     "postuninstall": "npm run clean"
   },

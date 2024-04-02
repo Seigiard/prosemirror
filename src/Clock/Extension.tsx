@@ -1,27 +1,23 @@
 import { mergeAttributes, Node } from '@tiptap/core';
 import { ReactNodeViewRenderer } from '@tiptap/react';
 
-import Component from './TagComponent';
+import Component from './Component';
+
+export const clockExtensionName = 'clockComponent';
+export const clockExtensionTag = 'clock-component';
 
 export default Node.create({
-  name: 'reactComponent',
+  name: clockExtensionName,
 
   group: 'inline',
   inline: true,
 
   atom: true,
 
-  addAttributes() {
-    return {
-      count: {
-        default: 0,
-      },
-    };
-  },
   parseHTML() {
     return [
       {
-        tag: 'react-component',
+        tag: clockExtensionTag,
       },
     ];
   },
