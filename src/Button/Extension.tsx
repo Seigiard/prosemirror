@@ -1,10 +1,23 @@
 import { mergeAttributes, Node } from '@tiptap/core';
 import { ReactNodeViewRenderer } from '@tiptap/react';
-
-import Component from './Component';
+import { NodeViewWrapper } from '@tiptap/react';
 
 export const buttonExtensionName = 'buttonComponent';
 export const buttonExtensionTag = 'button-component';
+
+const Component = (props) => {
+  const increase = () => {
+    props.updateAttributes({
+      count: props.node.attrs.count + 1,
+    });
+  };
+
+  return (
+    <NodeViewWrapper as='button' className='outline' onClick={increase}>
+      This button has been clicked {props.node.attrs.count} times.
+    </NodeViewWrapper>
+  );
+};
 
 export default Node.create({
   name: buttonExtensionName,
