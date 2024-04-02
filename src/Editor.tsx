@@ -7,11 +7,24 @@ import classes from './Editor.module.css';
 import { ButtonExtension, buttonExtensionTag } from './Button';
 import { ClockExtension, clockExtensionTag } from './Clock';
 import { JSONViewer } from './JsonViewer';
+import { ComboboxExtension, comboboxExtensionTag } from './Combobox';
 
 // define your extension array
-const extensions = [Document, Paragraph, Text, ClockExtension, ButtonExtension];
+const extensions = [
+  Document,
+  Paragraph,
+  Text,
+  ClockExtension,
+  ButtonExtension,
+  ComboboxExtension,
+];
 
-const content = `<p>Hello World! Look at button component: <${buttonExtensionTag} count="0"><${buttonExtensionTag} /></p><p>Wow, Clocks! <${clockExtensionTag} count="0"></${clockExtensionTag}></p><p>Content</p>`;
+const content = `
+  <p>Editable Content</p>
+  <p>Hello World! Look at button component: <${buttonExtensionTag} count="0"><${buttonExtensionTag} /></p>
+  <p>Wow, Clocks! <${clockExtensionTag} count="0"></${clockExtensionTag}></p>
+  <p>Wow, Dropdown! <${comboboxExtensionTag}></${comboboxExtensionTag}></p>
+`;
 
 export const Editor = () => {
   const editor = useEditor({

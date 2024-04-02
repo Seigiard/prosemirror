@@ -1,5 +1,10 @@
-import { Editor } from "./Editor";
+import { Editor } from './Editor';
+import { NamesProvider } from './context';
 
 export function App() {
-    return <Editor />;
+  return (
+    <NamesProvider>
+      <Editor />
+    </NamesProvider>
+  );
 }
