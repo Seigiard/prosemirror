@@ -3,14 +3,11 @@ export const JSONViewer = ({ value, title }) => {
     typeof value === 'string' ? value : JSON.stringify(value, null, 2);
 
   return (
-    <details>
-      <summary className='outline' role='button'>
-        {title}
-      </summary>
-
+    <article>
+      <h3>{title}</h3>
       <pre>
         <code>{output}</code>
       </pre>
-    </details>
+    </article>
   );
 };

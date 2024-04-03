@@ -41,10 +41,13 @@ export const Editor = () => {
 
   return (
     <div>
+      <h1>TipTap Editor</h1>
       <EditorContent className={classes.editor} editor={editor} />
       <EditorButtons editor={editor} />
-      {content && <JSONViewer value={content} title='Content Input' />}
-      {editor && <JSONViewer value={editor.getJSON()} title='JSON Output' />}
+      <div>
+        {content && <JSONViewer value={content} title='Content Input' />}
+        {editor && <JSONViewer value={editor.getJSON()} title='JSON Output' />}
+      </div>
     </div>
   );
 };
