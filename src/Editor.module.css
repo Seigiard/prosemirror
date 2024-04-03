@@ -1,15 +1,26 @@
 .editor {
   width: 100%;
   margin: 2rem auto;
-  border: 1px solid #eaeaea;
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .editor :global(.ProseMirror) {
   min-height: 15em;
-  padding: 20px;
+  --pico-background-color: var(--pico-form-element-background-color);
+  --pico-border-color: var(--pico-form-element-border-color);
+  --pico-color: var(--pico-form-element-color);
+  --pico-box-shadow: none;
+  padding: var(--pico-form-element-spacing-vertical)
+    var(--pico-form-element-spacing-horizontal);
+  border: var(--pico-border-width) solid var(--pico-border-color);
+  border-radius: var(--pico-border-radius);
+  background-color: var(--pico-background-color);
+  box-shadow: var(--pico-box-shadow);
+  color: var(--pico-color);
+  font-weight: var(--pico-font-weight);
+  transition: background-color var(--pico-transition),
+    border-color var(--pico-transition), color var(--pico-transition),
+    box-shadow var(--pico-transition);
+  outline: none;
 }
 .editor :global(.ProseMirror) p {
   margin: 0;

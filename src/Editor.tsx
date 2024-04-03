@@ -1,5 +1,6 @@
 // src/Tiptap.jsx
 import { useEditor, EditorContent } from '@tiptap/react';
+import History from '@tiptap/extension-history';
 import Document from '@tiptap/extension-document';
 import Paragraph from '@tiptap/extension-paragraph';
 import Text from '@tiptap/extension-text';
@@ -11,6 +12,7 @@ import { ComboboxExtension, comboboxExtensionTag } from './Combobox';
 
 // define your extension array
 const extensions = [
+  History,
   Document,
   Paragraph,
   Text,
