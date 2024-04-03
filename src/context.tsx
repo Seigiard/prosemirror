@@ -22,7 +22,6 @@ const NamesProvider: FC = ({ children }: PropsWithChildren) => {
     'Amelia',
     'Olivia',
     'Noah',
-    'Henry',
   ]);
 
   // Provide the state and functions to the children components

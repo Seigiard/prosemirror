@@ -1,6 +1,6 @@
 .editor {
   width: 100%;
-  margin: 2rem auto;
+  margin: var(--pico-block-spacing-vertical) auto;
 }
 
 .editor :global(.ProseMirror) {
@@ -31,4 +31,16 @@
   );
   display: flex;
   align-items: center;
+}
+
+.buttons {
+  margin: var(--pico-block-spacing-vertical) auto;
+  align-items: start;
+  button,
+  summary[role='button'] {
+    text-align: center;
+  }
+  details {
+    margin-bottom: 0;
+  }
 }
