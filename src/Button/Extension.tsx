@@ -12,9 +12,11 @@ const Component = (props) => {
     });
   };
 
+  const count = props.node.attrs.count;
+
   return (
     <NodeViewWrapper as='button' className='outline' onClick={increase}>
-      This button has been clicked {props.node.attrs.count} times.
+      {count ? `Clicked ${count} times` : 'Click me!'}
     </NodeViewWrapper>
   );
 };

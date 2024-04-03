@@ -22,15 +22,20 @@
     box-shadow var(--pico-transition);
   outline: none;
 }
-.editor :global(.ProseMirror) p {
-  margin: 0;
-  padding: 0;
-  height: calc(
-    (var(--pico-form-element-spacing-vertical) * 2) + var(--pico-line-height) *
-      1em
-  );
-  display: flex;
-  align-items: center;
+.editor :global(.ProseMirror) {
+  select {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    height: calc(
+      (var(--pico-form-element-spacing-vertical) * 2) + var(--pico-line-height) *
+        1em
+    );
+    display: flex;
+    align-items: center;
+  }
 }
 
 .buttons {
